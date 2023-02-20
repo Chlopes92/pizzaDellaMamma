@@ -1,0 +1,12 @@
+<main>
+    <article>
+        <h2>Benvenuto !</h2>
+        <p>Veuillez renseigner votre numéro de table</p>
+        
+    <form [formGroup]="numberOfTable">
+        <input type="text" placeholder="Exemple : 42" id="number_table" formControlName="number_table" [class.hasError]="validationError.includes('number_table')">
+        <button type="submit" (click)="acces()">C'est parti !</button>
+    </form>
+  
+    </article>
+</main>
