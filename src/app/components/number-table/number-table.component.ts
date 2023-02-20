@@ -9,8 +9,13 @@ import { Router } from '@angular/router';
 })
 export class NumberTableComponent {
 
+  isVisible = false;
   numberOfTable!: FormGroup;
   validationError: string [] = [];
+
+  hideParagraph() {
+    this.isVisible = true;
+  }
 
   constructor(private formBuilder: FormBuilder, private router: Router){}
 
@@ -20,7 +25,7 @@ export class NumberTableComponent {
 
   table(){
     this.numberOfTable = this.formBuilder.group({
-      number_table: [null, [Validators.required,]],
+      number_table: [null, [Validators.required, Validators.pattern(/^(?:[1-9]|1[0-4])$/)]],
     })
   }
 
