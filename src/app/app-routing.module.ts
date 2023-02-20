@@ -4,7 +4,7 @@ import { BasketComponent } from './pages/basket/basket.component';
 import { CustomizationComponent } from './pages/customization/customization.component';
 import { HomeComponent } from './pages/home/home.component';
 import { OrderConfirmationComponent } from './pages/order-confirmation/order-confirmation.component';
-import { ProductsComponent } from './pages/products/products.component';
+import { ProductCategoryComponent } from './pages/product-category/product-category.component';
 
 const routes: Routes = [
   {
@@ -12,22 +12,25 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "/products",
-    component: ProductsComponent
+    path: "products/:tagType",
+    component: ProductCategoryComponent
   },
   {
-    path: "/customization",
+    path: "products/:productCategoryType",
+    component: ProductCategoryComponent
+  },
+  {
+    path: "customization",
     component: CustomizationComponent
   },
   {
-    path: "/basket",
+    path: "basket",
     component: BasketComponent
   },
   {
-    path: "/orderConfirmation",
+    path: "orderConfirmation",
     component: OrderConfirmationComponent
   }
-
 ];
 
 @NgModule({
