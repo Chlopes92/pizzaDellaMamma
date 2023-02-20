@@ -8,6 +8,7 @@ import { CustomizationComponent } from './pages/customization/customization.comp
 import { BasketComponent } from './pages/basket/basket.component';
 import { OrderConfirmationComponent } from './pages/order-confirmation/order-confirmation.component';
 import { ProductCategoryComponent } from './pages/product-category/product-category.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductCategoryComponent } from './pages/product-category/product-categ
     CustomizationComponent,
     BasketComponent,
     OrderConfirmationComponent,
-    ProductCategoryComponent
+    ProductCategoryComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

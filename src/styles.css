@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-bg: #f9f9f9;
+    --color-red: #e12417;
+    --color: #092947;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color);
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--color-bg);
+}
+
+h1,h2,h3{
+    font-family: 'Playfair Display', serif;
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+}
