@@ -40,5 +40,9 @@ p{
 }
 
 .hasError{
-    border: 1px solid red;
+    border: 1px solid var(--color-red);
+}
+
+.redText{
+    color: var(--color-red);
 }
