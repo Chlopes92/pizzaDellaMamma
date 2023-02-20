@@ -11,12 +11,12 @@ const routes: Routes = [
     path: "",
     component: HomeComponent
   },
+  // {
+  //   path: "products/:tagType",
+  //   component: ProductCategoryComponent
+  // },
   {
-    path: "products/:tagType",
-    component: ProductCategoryComponent
-  },
-  {
-    path: "products/:productCategoryType",
+    path: "products",
     component: ProductCategoryComponent
   },
   {
