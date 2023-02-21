@@ -8,17 +8,6 @@ import { ProductsService } from 'src/app/services/products/products.service';
   styleUrls: ['./product-category.component.css']
 })
 export class ProductCategoryComponent {
-  products:IProduct[]=[];
-constructor(
-  private productService:ProductsService){}
-
-  ngOnInit(){
-    // this.products=this.productService.getProducts();
-    // this. initCategory();
-    }
-
-    initCategory(category:ProductCategoryType){
-      return this.productService.getCategoryProduct(category);
-    }
+ 
 }
 

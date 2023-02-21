@@ -11,6 +11,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { NumberTableComponent } from './components/number-table/number-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PizzaComponent } from './components/pizza/pizza.component';
+import { DrinkComponent } from './components/drink/drink.component';
+import { DessertComponent } from './components/dessert/dessert.component';
 
 
 @NgModule({
@@ -22,8 +25,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     OrderConfirmationComponent,
     ProductCategoryComponent,
     HeaderComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
     NumberTableComponent,
+    PizzaComponent,
+    DrinkComponent,
+    DessertComponent,
   ],
   imports: [
     BrowserModule,

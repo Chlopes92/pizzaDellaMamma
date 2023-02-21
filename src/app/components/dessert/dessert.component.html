@@ -1,0 +1,10 @@
+<p>Les desserts della Mamma</p>
+<ul >
+    <li *ngFor="let item of initCategory('dessert')">
+        <article >
+            <img src={{item.picture}} alt={{item.picture}}>
+            <h3>{{item.title}}</h3>
+            <p>{{item.price  * (100/10000) }}0€</p>
+        </article>
+    </li>
+</ul> 
