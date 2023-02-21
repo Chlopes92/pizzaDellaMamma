@@ -13,6 +13,7 @@ export class NumberTableComponent {
   numberOfTable!: FormGroup;
   validationError: string [] = [];
 
+  // Message d'Erreur
   hideParagraph() {
     this.isVisible = true;
   }
@@ -23,12 +24,14 @@ export class NumberTableComponent {
     this.table();
   }
 
+  // Valider si le numéro de table est compris entre 1 et 14
   table(){
     this.numberOfTable = this.formBuilder.group({
       number_table: [null, [Validators.required, Validators.pattern(/^(?:[1-9]|1[0-4])$/)]],
     })
   }
 
+  // Si le numéro est bon on accèder au site sinon on reste sur la page d'accueil
   acces(){
     this.validationError = [];
     console.log(this.numberOfTable.value);
