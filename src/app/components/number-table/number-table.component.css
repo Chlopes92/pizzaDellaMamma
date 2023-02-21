@@ -1,0 +1,48 @@
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 30px;
+}
+
+button{
+    background-color: var(--color);
+    color: white;
+    border: none;
+    width: 100px;
+    height: 57px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+h2{
+    color: var(--color-red);
+    font-size: 50px;
+}
+
+input{
+    border: none;
+    width: 350px;
+    height: 57px;
+    border-radius: 10px;
+}
+
+p{
+    font-size: 20px;
+}
+
+::placeholder{
+    color: var(--color-bg);
+    font-size: 20px;
+    padding: 20px;
+}
+
+.hasError{
+    border: 1px solid var(--color-red);
+}
+
+.redText{
+    color: var(--color-red);
+}
