@@ -1,10 +1,12 @@
-<p>drink works!</p>
-  <ul >
+<h3 class="title">Les boissons de la Mamma</h3>
+<section>
+    <ul>
         <li *ngFor="let item of initCategory('drink')">
             <article>
                 <img src={{item.picture}} alt={{item.picture}}>
                 <h3>{{item.title}}</h3>
-                <p>{{item.price  * (100/10000) }}.00€</p>
+                <p>{{item.price * (100/10000) }}.00€</p>
             </article>
         </li>
-    </ul> 
+    </ul>
+</section>
