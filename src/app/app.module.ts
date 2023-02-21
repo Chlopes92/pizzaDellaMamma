@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PizzaComponent } from './components/pizza/pizza.component';
 import { DrinkComponent } from './components/drink/drink.component';
 import { DessertComponent } from './components/dessert/dessert.component';
+import { IngredientsCustomComponent } from './components/ingredients-custom/ingredients-custom.component';
 
 
 @NgModule({
@@ -30,6 +31,8 @@ import { DessertComponent } from './components/dessert/dessert.component';
     PizzaComponent,
     DrinkComponent,
     DessertComponent,
+    IngredientsCustomComponent,
+
   ],
   imports: [
     BrowserModule,
