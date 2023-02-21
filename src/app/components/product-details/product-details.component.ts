@@ -16,12 +16,11 @@ export class ProductDetailsComponent {
 constructor(public ingredients: ProductsService,){}
 
 ngOnInit() {
-this.addIncludedIngredients();
+
 }
 
 addIncludedIngredients() {
-  console.log(this.ingredients)
-  return this.ingredients;
+
 }
 
 
