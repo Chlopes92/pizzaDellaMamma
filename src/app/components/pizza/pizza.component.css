@@ -3,8 +3,7 @@
     flex-wrap: wrap;
     gap:30px;
     width:75vw;
-    /* width:min(900px,100%); */
-    /* justify-content: center; */
+    
     list-style: none;
     margin:30px auto;
 
@@ -16,11 +15,16 @@ section{
 }
 img{
 
-    width:489px;
-    Height:489px;
+    width:207px;
+    Height:171px;
 }
 .title{
   font-style: italic;
   font-weight: bold;
-  margin-left:250px;
+  margin-left:105px;
+}
+article{
+    background-color: white;
+    /* border:red solid 4px; */
+    padding:10px;
 }

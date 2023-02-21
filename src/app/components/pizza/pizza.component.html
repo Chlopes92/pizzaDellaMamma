@@ -1,4 +1,4 @@
-<p class="title">Les pizzas della Mamma</p>
+<h3 class="title">Les pizzas della Mamma</h3>
 <section>
     <ul class="container-pizza">
         <li *ngFor="let item of initCategory('pizza')">
@@ -6,8 +6,6 @@
                 <img src={{item.picture}} alt={{item.picture}}>
                 <h3>{{item.title}}</h3>
                  <p>{{item.price * (100/10000) }}.00€</p>
-                
-           
                 </article>
         </li>
     </ul>
