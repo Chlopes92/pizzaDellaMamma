@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { NumberTableComponent } from './components/number-table/number-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IngredientsCustomComponent } from './components/ingredients-custom/ingredients-custom.component';
 
 
 @NgModule({
@@ -22,8 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     OrderConfirmationComponent,
     ProductCategoryComponent,
     HeaderComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
     NumberTableComponent,
+    IngredientsCustomComponent,
   ],
   imports: [
     BrowserModule,
