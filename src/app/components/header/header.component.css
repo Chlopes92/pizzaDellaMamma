@@ -1,3 +1,14 @@
+button{
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    width: 80px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+}
+
 header{
     background-color: var(--color);
     height: 70px;
@@ -8,4 +19,9 @@ h1{
     text-align: center;
     padding-top: 20px;
     font-style: italic;
+}
+
+div{
+    display: flex;
+    justify-content: flex-end;
 }

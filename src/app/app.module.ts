@@ -22,7 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     OrderConfirmationComponent,
     ProductCategoryComponent,
     HeaderComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
     NumberTableComponent,
   ],
   imports: [
