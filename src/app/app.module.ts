@@ -11,6 +11,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { NumberTableComponent } from './components/number-table/number-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PizzaComponent } from './components/pizza/pizza.component';
+import { DrinkComponent } from './components/drink/drink.component';
+import { DessertComponent } from './components/dessert/dessert.component';
 import { IngredientsCustomComponent } from './components/ingredients-custom/ingredients-custom.component';
 
 
@@ -25,7 +28,11 @@ import { IngredientsCustomComponent } from './components/ingredients-custom/ingr
     HeaderComponent,
     ProductDetailsComponent,
     NumberTableComponent,
+    PizzaComponent,
+    DrinkComponent,
+    DessertComponent,
     IngredientsCustomComponent,
+
   ],
   imports: [
     BrowserModule,
