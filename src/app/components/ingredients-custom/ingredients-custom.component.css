@@ -1,0 +1,56 @@
+section {
+    width: 370px;
+    margin-top: 37px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.ingredient {
+    font-weight: 700;
+}
+
+.counter {
+    font-size: 20px;
+    width: 13px;
+}
+
+.counter-block {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.counter-minus {
+    background: rgba(9, 41, 71, 0.6);
+    color: white;
+    font-size: 170%;
+}
+
+.counter-plus {
+    background: #092947;
+    color: white;
+    font-size: 170%;
+}
+
+.btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button button {
+    font-weight: 700;
+    padding: 24px 96px;
+    background: #092947;
+    color: white;
+    border-radius: 10px;
+    width: 370px;
+    margin-top: 42px;
+}
