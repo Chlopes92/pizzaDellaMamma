@@ -3,6 +3,13 @@
   gap: 20px;
 }
 
+.link-products {
+  margin: 57px 47px;
+  margin-left: 0px;
+  color: #092947;
+  text-decoration: underline;
+}
+
 .product-details {
   display: flex;
   flex-direction: column;
@@ -50,6 +57,14 @@
   justify-content: space-between;
   margin-bottom: 16px;
   border-bottom: 1px solid #d9d9d9;
+}
+
+.extras {
+  margin-top: 20px;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 input.radio {

@@ -53,4 +53,5 @@ section {
     border-radius: 10px;
     width: 370px;
     margin-top: 42px;
+    cursor: pointer;
 }
