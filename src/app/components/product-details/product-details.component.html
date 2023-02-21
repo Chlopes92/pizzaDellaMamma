@@ -3,38 +3,31 @@
     <a [routerLink]="['/products']">Retour aux produits</a>
   </div>
   <div class="container">
-      <div class="product-image">
-        <img src="{{ products[0].picture }}" alt="produit sélectionné" />
-      </div>
+    <div class="product-image">
+      <img src="{{ products[0].picture }}" alt="produit sélectionné" />
+    </div>
     <div class="product-details">
       <div class="details-container">
         <h2 class="product-title">{{ products[0].title }}</h2>
-        <p class="product-price">{{ products[0].price * (100/10000) }}.00€</p>
+        <p class="product-price">{{ products[0].price * (100 / 10000) }}.00€</p>
         <p>{{ products[1].description }}</p>
       </div>
       <div class="inputs-container">
         <h2 class="included-title">Ingrédients inclus</h2>
         <!-- Afficher seulement les ingrédients inclus du produit séletionné -->
         <div class="inputs">
-            <div class="inputs-display" *ngFor="let product of products">
-              <label for="included">{{product.title}}</label>
-                <input type="radio" class="radio" id="included"/>
-            </div>
-            <!-- <div class="inputs-display" *ngFor="let product of products">
-              <label for="included">{{ products[0].includedIngredients[product.id].ingredient.title }}</label>
-                <input type="radio" class="radio" id="included"/>
-            </div> -->
-            <!-- <div class="inputs-display">
-                {{ products[0].includedIngredients[0].ingredient.title }}
-                <input type="radio" class="radio" checked/>
-            </div>
-            <div class="inputs-display">
-                {{ products[0].includedIngredients[1].ingredient.title }}
-                <input type="radio" class="radio"/>
-            </div>  -->
-            <div>
-              <p class="extras">Extras</p>
-            </div>
+          <div
+            class="inputs-display"
+            *ngFor="let includedIngredient of products[0].includedIngredients"
+          >
+            <label for="included">{{
+              includedIngredient.ingredient.title
+            }}</label>
+            <input type="radio" class="radio" id="included" />
+          </div>
+          <div>
+            <p class="extras">Extras</p>
+          </div>
         </div>
       </div>
     </div>
