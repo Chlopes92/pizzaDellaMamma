@@ -1,5 +1,5 @@
 <section>
-  <div class="container"  *ngFor="let extraIngredient of products[0].extras; index as i">
+  <div class="container"  *ngFor="let extraIngredient of products[0].products[0].extras; index as i">
     <div >
       <p class="ingredient">{{extraIngredient.ingredient.title}}</p>
       <p class="ingredient-price">{{extraIngredient.additionalPrice * (100/10000)}}.00€</p>
