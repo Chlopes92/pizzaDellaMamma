@@ -10,11 +10,15 @@ export class ProductsService {
   getProducts(): IProduct[] {
     return PRODUCTS;
   }
+
+  //retourn une categorie de produits
+
   // Théoriquement retourne un seul produit
   getOneProduct(id: number): IProduct[] {
     return PRODUCTS.filter(index => index.id === id)
   }
   //retourne une categorie de produits
+
   getCategoryProduct(category: ProductCategoryType): IProduct[] {
     return PRODUCTS.filter(categoryProduct => categoryProduct.category === category)
   }
