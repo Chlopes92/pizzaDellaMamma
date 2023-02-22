@@ -3,10 +3,10 @@
     <ul class="container-pizza">
         <li *ngFor="let item of initCategory('pizza')">
             <article>
-                <img src={{item.picture}} alt={{item.picture}}>
+                <button routerLink="/customization/{{item.id}}"><img src={{item.picture}} alt={{item.picture}}></button>
                 <h3>{{item.title}}</h3>
-                 <p>{{item.price * (100/10000) }}.00€</p>
-                </article>
+                 <p>{{item.price / (100) }}€</p>
+            </article>
         </li>
     </ul>
 </section>
