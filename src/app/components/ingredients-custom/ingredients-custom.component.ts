@@ -13,18 +13,31 @@ export class IngredientsCustomComponent {
   products: IProduct[] = PRODUCTS;
   // Je récupère mon service où j'ai implémenté ma méthode pour récupérer la liste des ingrédients extras
   constructor(public ingredients: ProductsService) {}
-  // Mon compteur
-  counter: number = 0;
+
+  limitDown: number = 0;
 
   ngOnInit() {}
 
-  increment() {
-    this.counter += 1;
-    return this.counter;
+  increment(i: any) {
+    // Je modifie DIRECTEMENT la quantité en index de mon mock
+    // JE NE PASSE PAS par une variable ex. quantity = this.products[0].extras[i].quantity => qui sera commune à tous les compteurs et
+    // incrémentera donc tous les compteurs
+    while (
+      this.products[0].extras[i].quantity <
+      this.products[0].extras[i].maxQuantity
+    ) {
+      return (this.products[0].extras[i].quantity += 1);
+    }
+    return this.products[0].extras[i].maxQuantity;
   }
 
-  decrement() {
-    this.counter -= 1;
-    return this.counter;
+  decrement(i: any) {
+    // Je modifie DIRECTEMENT la quantité en index de mon mock
+    // JE NE PASSE PAS par une variable ex. quantity = this.products[0].extras[i].quantity => qui sera commune à tous les compteurs et
+    // incrémentera donc tous les compteurs
+    while (this.products[0].extras[i].quantity > this.limitDown) {
+      return (this.products[0].extras[i].quantity -= 1);
+    }
+    return (this.products[0].extras[i].maxQuantity = this.limitDown);
   }
 }
