@@ -25,6 +25,7 @@ export class ProductsService {
    //retourne un produit par id
    getProduct(id:number): IProduct | undefined{
     return PRODUCTS.find(product => product.id ===id);
+   }
     
   // Théoriquement Retourne la liste des ingrédients inclus
   getIncludedIngredients(included: IIncludedIngredient[]): IProduct[] {
