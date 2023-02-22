@@ -4,10 +4,23 @@
         <p>Veuillez renseigner votre numéro de table</p>
 
     <form [formGroup]="numberOfTable">
-        <input type="text" placeholder="Exemple : 42" id="number_table" formControlName="number_table" [class.hasError]="validationError.includes('number_table')">
-        <button type="submit" (click)="acces()" (click)="hideParagraph()">C'est parti !</button>
+        <input type="text" placeholder="Exemple : 42" id="number_table" formControlName="number_table" [class.hasError]="validationError.includes('number_table')" (change)="evenement($event)">
+        <button type="submit" (click)="acces()"(click)="hideParagraph()">C'est parti !</button>
         <p [class.redText]="validationError.includes('number_table')" *ngIf="isVisible">Numéro de table incorrecte.</p>
     </form>
   
     </article>
+
+    <article>
+        <h2>Table </h2>
+        <p>Modifier mon numéros de table</p>
+    
+    <!-- <form [formGroup]="numberOfTable">
+        <input type="text" placeholder="Exemple : 42" id="number_table" formControlName="number_table" [class.hasError]="validationError.includes('number_table')">
+        <button type="submit" (click)="acces()"(click)="hideParagraph()">Modifier</button> -->
+        <!-- <p [class.redText]="validationError.includes('number_table')" *ngIf="isVisible">Numéro de table incorrecte.</p>
+    </form>  -->
+    <a routerLink="/product-category">Revenir à la commande</a>
+    </article>
+
 </main>
