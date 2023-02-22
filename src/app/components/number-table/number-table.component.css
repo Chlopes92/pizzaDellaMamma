@@ -35,7 +35,7 @@ p{
 }
 
 ::placeholder{
-    color: var(--color-bg);
+    color: #d9d9d9;
     font-size: 20px;
     padding: 20px;
 }

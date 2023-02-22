@@ -16,6 +16,7 @@ import { DrinkComponent } from './components/drink/drink.component';
 import { DessertComponent } from './components/dessert/dessert.component';
 import { CategoryComponentComponent } from './components/category-component/category-component.component';
 import { IngredientsCustomComponent } from './components/ingredients-custom/ingredients-custom.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -35,6 +36,7 @@ import { IngredientsCustomComponent } from './components/ingredients-custom/ingr
     DessertComponent,
     CategoryComponentComponent,
     IngredientsCustomComponent,
+    FooterComponent,
 
   ],
   imports: [
