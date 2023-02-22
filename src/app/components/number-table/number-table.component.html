@@ -1,5 +1,5 @@
 <main>
-    <article>
+    <article *ngIf="visible.showDivHome">
         <h2>Benvenuto !</h2>
         <p>Veuillez renseigner votre numéro de table</p>
 
@@ -11,7 +11,7 @@
   
     </article>
 
-    <article>
+    <article *ngIf="visible.showDivModify">
         <h2>Table </h2>
         <p>Modifier mon numéros de table</p>
     

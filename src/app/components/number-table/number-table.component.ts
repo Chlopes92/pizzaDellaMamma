@@ -3,6 +3,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TableService } from 'src/app/services/table/table.service';
+import { VisibleService } from 'src/app/services/visible/visible.service';
 
 @Component({
   selector: 'app-number-table',
@@ -11,19 +12,20 @@ import { TableService } from 'src/app/services/table/table.service';
 })
 export class NumberTableComponent {
 
-  isVisible = false;
+  isVisible: boolean = false;
   numberOfTable!: FormGroup;
   validationError: string [] = [];
   data: number = 0;
 
-  hideParagraph() {
-    this.isVisible = true;
-  }
-
-  constructor(private formBuilder: FormBuilder, private router: Router, public Table: TableService){}
+ 
+  constructor(private formBuilder: FormBuilder, private router: Router, public Table: TableService, public visible: VisibleService){}
 
   ngOnInit(){
     this.table();
+  }
+
+  hideParagraph() {
+    this.isVisible = true;
   }
 
   table(){

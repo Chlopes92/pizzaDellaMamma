@@ -4,7 +4,7 @@
         <!-- <div *ngIf="isVisible"> -->
         <div>
             <!-- On fait appel au service pour pouvoir afficher le numéro de la table -->
-            <button routerLink="">Table {{table[0]}}</button>
+            <button routerLink="" (click)="showNewDiv()">Table {{table[0]}}</button>
             <button routerLink="/basket"><img src="assets/icon/cart_shopping_ic_icon.png" alt="panier"></button>
         </div>
         <!-- </div> -->
