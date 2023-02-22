@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IProduct, ProductCategoryType } from 'src/app/mocks/products.mock';
-import { ProductsService } from 'src/app/services/products/products.service';
+// import { IProduct, ProductCategoryType } from 'src/app/mocks/products.mock';
+// import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
   selector: 'app-product-category',

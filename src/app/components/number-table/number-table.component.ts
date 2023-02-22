@@ -54,7 +54,7 @@ export class NumberTableComponent {
 
       this.Table.newTable.push(this.data)
       console.log(this.Table.newTable);
-      this.router.navigate(['/products']);
+      this.router.navigate(['/PRODUCTS']);
     }
   }
 }
