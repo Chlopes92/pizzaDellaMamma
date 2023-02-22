@@ -20,7 +20,7 @@ const routes: Routes = [
     component: ProductCategoryComponent
   },
   {
-    path: "customization",
+    path: "customization/:id",
     component: CustomizationComponent
   },
   {
