@@ -14,39 +14,30 @@ export class IngredientsCustomComponent {
   // Je récupère mon service où j'ai implémenté ma méthode pour récupérer la liste des ingrédients extras
   constructor(public ingredients: ProductsService) {}
 
-  limitDown: number = 1;
-  quantity: any = this.products[0].extras[1].quantity;
-  maxQuantity: any = this.products[0].extras[1].maxQuantity;
-  
-  ngOnInit() {
-  }
-  
+  limitDown: number = 0;
+
+  ngOnInit() {}
+
   increment(i: any) {
-    this.quantity = this.products[0].extras[i].quantity;
-    this.maxQuantity = this.products[0].extras[i].maxQuantity;
-    // Au clic je récupère les bonnes datas des extras
-    console.log(this.quantity)
-    console.log(this.maxQuantity)
-    // Ma condition
-    while(this.quantity < this.maxQuantity) {
-      this.quantity += 1;
-      return this.quantity;
+    // Je modifie DIRECTEMENT la quantité en index de mon mock
+    // JE NE PASSE PAS par une variable ex. quantity = this.products[0].extras[i].quantity => qui sera commune à tous les compteurs et
+    // incrémentera donc tous les compteurs
+    while (
+      this.products[0].extras[i].quantity <
+      this.products[0].extras[i].maxQuantity
+    ) {
+      return (this.products[0].extras[i].quantity += 1);
     }
-    return this.quantity = this.quantity;
+    return this.products[0].extras[i].maxQuantity;
   }
 
   decrement(i: any) {
-    this.quantity = this.products[0].extras[i].quantity;
-    this.maxQuantity = this.products[0].extras[i].maxQuantity;
-      // Au clic je récupère les bonnes datas des extras
-    console.log(this.quantity)
-    console.log(this.maxQuantity)
-    // Ma condition
-    while(this.quantity > this.limitDown) {
-      this.quantity -= 1;
-      // console.log(this.quantity)
-      return this.quantity;
+    // Je modifie DIRECTEMENT la quantité en index de mon mock
+    // JE NE PASSE PAS par une variable ex. quantity = this.products[0].extras[i].quantity => qui sera commune à tous les compteurs et
+    // incrémentera donc tous les compteurs
+    while (this.products[0].extras[i].quantity > this.limitDown) {
+      return (this.products[0].extras[i].quantity -= 1);
     }
-    return this.quantity = 0;
+    return (this.products[0].extras[i].maxQuantity = this.limitDown);
   }
 }
