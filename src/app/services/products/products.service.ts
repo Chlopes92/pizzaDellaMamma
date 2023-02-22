@@ -12,6 +12,7 @@ export class ProductsService {
   getProducts(): IProduct[] {
     return PRODUCTS;
   }
+
   //retourn une categorie de produits
   getCategoryProduct(category: ProductCategoryType): IProduct[] {
     return PRODUCTS.filter(categoryProduct => categoryProduct.category === category)
