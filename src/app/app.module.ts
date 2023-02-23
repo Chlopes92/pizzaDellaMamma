@@ -20,6 +20,7 @@ import { PRODUCTSComponent } from './pages/products/products.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavActionComponent } from './components/nav-action/nav-action.component';
 
 
 
@@ -44,6 +45,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ProductListComponent,
     ProductCardComponent,
     FooterComponent,
+    NavActionComponent,
 
   ],
   imports: [
