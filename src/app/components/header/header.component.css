@@ -19,9 +19,17 @@ h1{
     text-align: center;
     padding-top: 20px;
     font-style: italic;
+    display: inline-block;
 }
 
 div{
+    display: inline-block;
+    position: absolute;
+    margin-left: 70vw;
+    margin-top: 9px;
+}
+
+nav{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }

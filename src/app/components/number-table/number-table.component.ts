@@ -3,6 +3,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TableService } from 'src/app/services/table/table.service';
+import { VisibleService } from 'src/app/services/visible/visible.service';
 
 @Component({
   selector: 'app-number-table',
@@ -11,19 +12,24 @@ import { TableService } from 'src/app/services/table/table.service';
 })
 export class NumberTableComponent {
 
-  isVisible = false;
+  isVisible: boolean = false;
   numberOfTable!: FormGroup;
   validationError: string [] = [];
   data: number = 0;
+  //On appelle récupére le numéro obtenu dans le service
+  modifyTable: number[] = this.Table.newTable;
 
-  hideParagraph() {
-    this.isVisible = true;
-  }
+  constructor(private formBuilder: FormBuilder, private router: Router, public Table: TableService, public visible: VisibleService){}
 
-  constructor(private formBuilder: FormBuilder, private router: Router, public Table: TableService){}
+
 
   ngOnInit(){
     this.table();
+  
+  }
+
+  hideParagraph() {
+    this.isVisible = true;
   }
 
   table(){
@@ -51,8 +57,8 @@ export class NumberTableComponent {
       })
       console.log(this.validationError)
     }else{
-
-      this.Table.newTable.push(this.data)
+      //pusher dans le service
+      this.Table.newTable.push(this.data);
       console.log(this.Table.newTable);
       this.router.navigate(['/PRODUCTS']);
     }
