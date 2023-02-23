@@ -16,12 +16,16 @@ export class NumberTableComponent {
   numberOfTable!: FormGroup;
   validationError: string [] = [];
   data: number = 0;
+  //On appelle récupére le numéro obtenu dans le service
+  modifyTable: number[] = this.Table.newTable;
 
- 
   constructor(private formBuilder: FormBuilder, private router: Router, public Table: TableService, public visible: VisibleService){}
+
+
 
   ngOnInit(){
     this.table();
+  
   }
 
   hideParagraph() {
@@ -53,8 +57,8 @@ export class NumberTableComponent {
       })
       console.log(this.validationError)
     }else{
-
-      this.Table.newTable.push(this.data)
+      //pusher dans le service
+      this.Table.newTable.push(this.data);
       console.log(this.Table.newTable);
       this.router.navigate(['/products']);
     }

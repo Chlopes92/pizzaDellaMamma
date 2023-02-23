@@ -13,7 +13,7 @@ export class TableService {
    // Enregistre le numéro de Table dans le localstorage
    private saveTable(table: TableService){
   
-    localStorage.setItem('student', JSON.stringify(table));
+    localStorage.setItem('table', JSON.stringify(table));
   }
 
   // Récupérer le numéro de Table dans le localstorage
