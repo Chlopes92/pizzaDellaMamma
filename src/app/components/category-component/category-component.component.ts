@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IProduct, ProductCategoryType } from 'src/app/mocks/products.mock';
+import { Component, Input } from '@angular/core';
+import { IProduct, IProductsByCategory, ProductCategoryType, PRODUCTS } from 'src/app/mocks/productsfiltre.mock';
+// import { IProduct, ProductCategoryType } from 'src/app/mocks/products.mock';
 import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
@@ -8,16 +9,23 @@ import { ProductsService } from 'src/app/services/products/products.service';
   styleUrls: ['./category-component.component.css']
 })
 export class CategoryComponentComponent {
-  products:IProduct[]=[];
+  // products:IProduct[]=[];
                                             
-  constructor(
-    private productService:ProductsService){}
-  
-    
-  
-      initCategory(category:ProductCategoryType){
-        return  this.productService.getCategoryProduct(category);
+  // constructor(
+  //   private productService:ProductsService){}
+      // initCategory(category:ProductCategoryType){
+      //   return  this.productService.getCategoryProduct(category);
         
-        }
+      //   }
 
+//je recois du parents
+ @Input() nameCategories!:IProductsByCategory;
+//  @Input() nameCategories!:IProduct[];
+//  je cree une variable que je vais boucler avec  dans le component enfant
+//  products:IProductsByCategory[]=PRODUCTS;
+ngOnInit(){
+  console.log(this.nameCategories)
+}
+
+      
 }

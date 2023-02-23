@@ -5,6 +5,7 @@ import { CustomizationComponent } from './pages/customization/customization.comp
 import { HomeComponent } from './pages/home/home.component';
 import { OrderConfirmationComponent } from './pages/order-confirmation/order-confirmation.component';
 import { ProductCategoryComponent } from './pages/product-category/product-category.component';
+import { PRODUCTSComponent } from './pages/products/products.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,11 @@ const routes: Routes = [
   {
     path: "products",
     component: ProductCategoryComponent
+  },
+  {
+    path:"PRODUCTS",
+    component: PRODUCTSComponent
+
   },
   {
     path: "customization",

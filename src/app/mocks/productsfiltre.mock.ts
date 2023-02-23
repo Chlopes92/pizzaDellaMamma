@@ -577,6 +577,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           "Base sauce tomate, mozzarella, viande hachée, champignons et poulet fumé.",
         price: 950,
         picture: "assets/img-product/pizza/pizza-bolognaise.png",
+        
         includedIngredients: [
           {
             ingredient: {
@@ -843,6 +844,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           "Base sauce tomate, mozzarella, viande hachée, champignons et poulet fumé.",
         price: 950,
         picture: "assets/img-product/pizza/pizza-rio.png",
+
         includedIngredients: [
           {
             ingredient: {
@@ -1108,6 +1110,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Base blanche, mozzarella, chèvre, Gorgonzola et Boursin.",
         price: 950,
         picture: "assets/img-product/pizza/pizza-quatre-fromages.png",
+
         includedIngredients: [
           {
             ingredient: {
@@ -1374,6 +1377,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           "Base sauce tomate, mozzarella, anchois, olives et câpres.",
         price: 850,
         picture: "assets/img-product/pizza/pizza-napolitaine.png",
+
         includedIngredients: [
           {
             ingredient: {
@@ -1639,6 +1643,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Base sauce tomate, mozzarella et olives.",
         price: 700,
         picture: "assets/img-product/pizza/pizza-margherita.png",
+
         includedIngredients: [
           {
             ingredient: {
@@ -1891,6 +1896,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           "Base sauce tomate, Champignons, Poivrons, Pomme de terre, Oignons et Olives.",
         price: 900,
         picture: "assets/img-product/pizza/pizza-veggie.png",
+
         includedIngredients: [
           {
             ingredient: {
@@ -2169,6 +2175,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "",
         price: 350,
         picture: "assets/img-product/drink/coca-cola.png",
+
         includedIngredients: [],
         extras: [],
         tags: ["drink"],
@@ -2179,6 +2186,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "",
         price: 350,
         picture: "assets/img-product/drink/coca-cola-zero.png",
+
         includedIngredients: [],
         extras: [],
         tags: ["drink"],
@@ -2189,6 +2197,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "",
         price: 450,
         picture: "assets/img-product/drink/limonade.png",
+
         includedIngredients: [],
         extras: [],
         tags: ["drink"],
@@ -2205,6 +2214,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Mi cuit au chocolat.",
         price: 690,
         picture: "assets/img-product/dessert/chocolat.png",
+
         includedIngredients: [],
         extras: [],
         tags: ["dessert"],
@@ -2215,6 +2225,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Panna cotta , accompagnée d’un coulis aux fruits rouges.",
         price: 690,
         picture: "assets/img-product/dessert/pannacotta.png",
+
         includedIngredients: [],
         extras: [],
         tags: ["dessert"],
@@ -2226,6 +2237,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           "Entremets italien à base de mascarpone, de biscuit, parfumé au café et saupoudré de cacao.",
         price: 690,
         picture: "assets/img-product/dessert/tiramisu.png",
+
         includedIngredients: [],
         extras: [],
         tags: ["dessert"],
