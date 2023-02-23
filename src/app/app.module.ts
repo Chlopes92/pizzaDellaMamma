@@ -19,6 +19,8 @@ import { IngredientsCustomComponent } from './components/ingredients-custom/ingr
 import { PRODUCTSComponent } from './pages/products/products.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 
 
@@ -41,6 +43,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     PRODUCTSComponent,
     ProductListComponent,
     ProductCardComponent,
+    FooterComponent,
 
   ],
   imports: [
