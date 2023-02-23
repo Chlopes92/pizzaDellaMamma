@@ -25,7 +25,6 @@ export class NumberTableComponent {
 
   ngOnInit(){
     this.table();
-  
   }
 
   hideParagraph() {
@@ -58,7 +57,11 @@ export class NumberTableComponent {
       console.log(this.validationError)
     }else{
       //pusher dans le service
-      this.Table.newTable.push(this.data);
+      // this.Table.newTable.push(this.data);
+      
+      //Remplace tous les éléments du tableau par la nouvelle donnée
+      this.Table.newTable.splice(0, this.Table.newTable.length, this.data);
+
       console.log(this.Table.newTable);
       this.router.navigate(['/PRODUCTS']);
     }

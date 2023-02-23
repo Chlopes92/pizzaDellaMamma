@@ -10,6 +10,8 @@ export class TableService {
   // Variable qui renvoit un tableau vide
   newTable: number[] = [];
 
+
+
    // Enregistre le numéro de Table dans le localstorage
    private saveTable(table: TableService){
   

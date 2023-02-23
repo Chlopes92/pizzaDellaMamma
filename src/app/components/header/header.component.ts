@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { TableService } from 'src/app/services/table/table.service';
 import { VisibleService } from 'src/app/services/visible/visible.service';
 
@@ -9,39 +9,22 @@ import { VisibleService } from 'src/app/services/visible/visible.service';
 })
 export class HeaderComponent {
 
-  // On appel le service Table
-  constructor (public data: TableService, public visible: VisibleService){}
+  constructor (public data: TableService, public visibleService: VisibleService){}
 
-  // On utilise cette variable pour appeler celle du service Table
   table: any[] = [];
 
-  
-
-  
   ngOnInit(){
     this.table = this.data.newTable;
     console.log(this.table)
   }
 
-  // showNewDiv() {
-  //   this.visible.hideDivHome();
-  //   this.visible.showDivModify();
-  // }
-
-  //Pour déclencher le service visible au click
   toggle() {
-    this.visible.toggleShowDivModification();
+    this.visibleService.toggleShowDivModification();
   }
 
-  //Pour déclencher le service visible au click
   toggleDivHome() {
-    this.visible.toggleshowDivHome();
+    this.visibleService.toggleshowDivHome();
   }
-  // isVisible = false;
-
-  // hideParagraph() {
-  //   this.isVisible = true;
-  // }
 
 
 }
