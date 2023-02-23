@@ -1,4 +1,5 @@
 <!-- <p>category-component works!</p> -->
 <h2>{{nameCategories.category}}</h2>
 
-<app-product-list *ngFor="let product of products" [productsList]="product.products"></app-product-list>
+<!-- <app-product-list *ngFor="let product of products" [productsList]="product.products"></app-product-list> -->
+<app-product-list  [productsList]="nameCategories.products"></app-product-list>

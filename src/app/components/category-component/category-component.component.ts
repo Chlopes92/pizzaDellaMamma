@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IProductsByCategory, ProductCategoryType, PRODUCTS } from 'src/app/mocks/productsfiltre.mock';
+import { IProduct, IProductsByCategory, ProductCategoryType, PRODUCTS } from 'src/app/mocks/productsfiltre.mock';
 // import { IProduct, ProductCategoryType } from 'src/app/mocks/products.mock';
 import { ProductsService } from 'src/app/services/products/products.service';
 
@@ -20,8 +20,12 @@ export class CategoryComponentComponent {
 
 //je recois du parents
  @Input() nameCategories!:IProductsByCategory;
+//  @Input() nameCategories!:IProduct[];
 //  je cree une variable que je vais boucler avec  dans le component enfant
- products:IProductsByCategory[]=PRODUCTS;
+//  products:IProductsByCategory[]=PRODUCTS;
+ngOnInit(){
+  console.log(this.nameCategories)
+}
 
       
 }
