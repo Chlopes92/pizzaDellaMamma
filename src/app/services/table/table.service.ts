@@ -9,4 +9,17 @@ export class TableService {
 
   // Variable qui renvoit un tableau vide
   newTable: number[] = [];
+
+   // Enregistre le numéro de Table dans le localstorage
+   private saveTable(table: TableService){
+  
+    localStorage.setItem('student', JSON.stringify(table));
+  }
+
+  // Récupérer le numéro de Table dans le localstorage
+  public getTable(){
+
+    return localStorage.getItem("table");
+  }
+
 }

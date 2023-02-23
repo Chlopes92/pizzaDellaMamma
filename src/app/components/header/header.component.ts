@@ -18,11 +18,19 @@ export class HeaderComponent {
     console.log(this.table)
   }
 
-  showNewDiv() {
-    this.visible.hideDivHome();
-    this.visible.showDivModify();
+  // showNewDiv() {
+  //   this.visible.hideDivHome();
+  //   this.visible.showDivModify();
+  // }
+
+  
+  toggle() {
+    this.visible.toggleShowDivModification();
   }
 
+  toggleDivHome() {
+    this.visible.toggleshowDivHome();
+  }
   // isVisible = false;
 
   // hideParagraph() {

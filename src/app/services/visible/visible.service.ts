@@ -5,22 +5,32 @@ import { EventEmitter, Injectable } from '@angular/core';
 })
 export class VisibleService {
 
-  showDivHome: boolean = true;
-  showDivModification: boolean = false;
+  showDivModification: boolean = true;
+  showDivHome: boolean = false;
+  showButton: boolean = false;
+  // isVisible: boolean = true;
 
-  showDivHomeChanged = new EventEmitter<boolean>();
   showDivModificationChanged = new EventEmitter<boolean>();
+  showDivHomeChanged = new EventEmitter<boolean>();
+  //showButtonChanged = new EventEmitter <boolean>();
+  // isVisibleChanged = new EventEmitter <boolean>();
 
   constructor() { }
 
-  hideDivHome() {
-    this.showDivHome = false;
+  toggleShowDivModification() {
+    this.showDivModification = false;
+    this.showDivModificationChanged.emit(this.showDivModification);
+  }
+
+  toggleshowDivHome() {
+    this.showDivHome = true;
     this.showDivHomeChanged.emit(this.showDivHome);
   }
 
-  showDivModify() {
-    this.showDivModification = true;
-    this.showDivModificationChanged.emit(this.showDivModification);
-  }
+  // toggleShowButton(){
+  //   this.showButton = !this.showButton;
+  //   this.showButtonChanged.emit(this.showButton);
+  // }
+
 
 }
