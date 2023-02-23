@@ -27,24 +27,34 @@ section {
 }
 
 .counter-minus {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
     background: rgba(9, 41, 71, 0.6);
     color: white;
     font-size: 170%;
 }
 
 .counter-plus {
-    background: #092947;
-    color: white;
-    font-size: 170%;
-}
-
-.btn {
     width: 36px;
     height: 36px;
     border-radius: 50px;
     border: none;
     cursor: pointer;
+    background: #092947;
+    color: white;
+    font-size: 170%;
 }
+
+/* .btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+} */
 
 .add-button button {
     font-weight: 700;
