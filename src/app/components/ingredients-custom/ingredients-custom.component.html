@@ -1,16 +1,16 @@
 <section>
-  <div class="container"  *ngFor="let extraIngredient of products[0].products[0].extras; index as i">
+  <div class="container"  *ngFor="let extraIngredient of products[0].products[0].extras; index as i" >
     <div >
       <p class="ingredient">{{extraIngredient.ingredient.title}}</p>
-      <p class="ingredient-price">{{extraIngredient.additionalPrice * (100/10000)}}.00€</p>
+      <p class="ingredient-price">{{extraIngredient.additionalPrice * (100/10000)}}€</p>
     </div>
     <div class="counter-block">
-      <button class="counter-minus btn" (click)="decrement(i)">-</button>
+      <button class="counter-minus btn" (click)="decrement(i)" (click)="totalAmount(i)">-</button>
       <p class="counter">{{extraIngredient.quantity}}</p>
-      <button class="counter-plus btn" (click)="increment(i)">+</button>
+      <button class="counter-plus btn" (click)="increment(i)" (click)="totalAmount(i)">+</button>
     </div>
   </div>
   <div class="add-button">
-    <button>Ajouter au panier</button> 
+    <button>Ajouter au panier . {{totalExtras}}€</button> 
   </div>
 </section>
