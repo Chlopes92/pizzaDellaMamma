@@ -20,7 +20,7 @@
         <button type="submit" (click)="acces()" (click)="hideParagraph()">Modifier</button>
         <p [class.redText]="validationError.includes('number_table')" *ngIf="isVisible">Numéro de table incorrecte.</p>
     </form>
-    <a routerLink="/product-category">Revenir à la commande</a>
+    <a routerLink="." (click)="goBack()">Revenir à la commande</a>
     </article>
 
 </main>

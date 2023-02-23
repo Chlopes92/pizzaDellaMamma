@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TableService } from 'src/app/services/table/table.service';
 import { VisibleService } from 'src/app/services/visible/visible.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-number-table',
@@ -19,12 +20,15 @@ export class NumberTableComponent {
   //On appelle récupére le numéro obtenu dans le service
   modifyTable: number[] = this.Table.newTable;
 
-  constructor(private formBuilder: FormBuilder, private router: Router, public Table: TableService, public visible: VisibleService){}
-
-
+  constructor(private formBuilder: FormBuilder, private router: Router, public Table: TableService, public visible: VisibleService, private location: Location){}
 
   ngOnInit(){
     this.table();
+  }
+
+  //fonction pour bouton retour en arrière
+  goBack(): void {
+    this.location.back();
   }
 
   hideParagraph() {
