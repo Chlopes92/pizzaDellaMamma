@@ -30,6 +30,7 @@ export interface IProduct {
 export interface IProductsByCategory {
   id: number;
   category: ProductCategoryType;
+  title:string;
   products: IProduct[];
 }
 
@@ -37,6 +38,7 @@ export const PRODUCTS: IProductsByCategory[] = [
   {
     id: 1,
     category: "pizza",
+    title:"Les pizzas della Mamma ",
     products: [
       {
         id: 1,
@@ -44,7 +46,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description:
           "Base crème fraîche, mozzarella, poulet fumé et pommes de terre.",
         price: 900,
-        picture: "assests/img-product/pizza-chicken.png",
+        picture: "assets/img-product/pizza/pizza-chicken.png",
         includedIngredients: [
           {
             ingredient: {
@@ -303,7 +305,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description:
           "Base sauce tomate, mozzarella, escalope, viande hachée, merguez et poivrons.",
         price: 900,
-        picture: "assests/img-product/pizza-orientale.png",
+        picture: "assets/img-product/pizza/pizza-orientale.png",
         includedIngredients: [
           {
             ingredient: {
@@ -576,7 +578,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description:
           "Base sauce tomate, mozzarella, viande hachée, champignons et poulet fumé.",
         price: 950,
-        picture: "assets/img-product/pizza-bolognaise.png",
+        picture: "assets/img-product/pizza/pizza-bolognaise.png",
         includedIngredients: [
           {
             ingredient: {
@@ -842,7 +844,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description:
           "Base sauce tomate, mozzarella, viande hachée, champignons et poulet fumé.",
         price: 950,
-        picture: "assets/img-product/pizza-rio.png",
+        picture: "assets/img-product/pizza/pizza-rio.png",
         includedIngredients: [
           {
             ingredient: {
@@ -1107,7 +1109,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         title: "Pizza Quatre Fromages",
         description: "Base blanche, mozzarella, chèvre, Gorgonzola et Boursin.",
         price: 950,
-        picture: "assets/img-product/pizza-quatre-fromages.png",
+        picture: "assets/img-product/pizza/pizza-quatre-fromages.png",
         includedIngredients: [
           {
             ingredient: {
@@ -1373,7 +1375,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description:
           "Base sauce tomate, mozzarella, anchois, olives et câpres.",
         price: 850,
-        picture: "assets/img-product/pizza-napolitaine.png",
+        picture: "assets/img-product/pizza/pizza-napolitaine.png",
         includedIngredients: [
           {
             ingredient: {
@@ -1638,7 +1640,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         title: "Pizza Margherita",
         description: "Base sauce tomate, mozzarella et olives.",
         price: 700,
-        picture: "assets/img-product/pizza-margherita.png",
+        picture: "assets/img-product/pizza/pizza-margherita.png",
         includedIngredients: [
           {
             ingredient: {
@@ -1890,7 +1892,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description:
           "Base sauce tomate, Champignons, Poivrons, Pomme de terre, Oignons et Olives.",
         price: 900,
-        picture: "assets/img-product/pizza-veggie.png",
+        picture: "assets/img-product/pizza/pizza-veggie.png",
         includedIngredients: [
           {
             ingredient: {
@@ -2162,13 +2164,14 @@ export const PRODUCTS: IProductsByCategory[] = [
   {
     id: 2,
     category: "drink",
+    title:"Les boissons della Mamma ",
     products: [
       {
         id: 9,
         title: "Coca Cola",
         description: "",
         price: 350,
-        picture: "assets/imag-product/coca-cola.png",
+        picture: "assets/img-product/drink/coca-cola.png",
         includedIngredients: [],
         extras: [],
         tags: ["drink"],
@@ -2178,7 +2181,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         title: "Coca Cola Zéro",
         description: "",
         price: 350,
-        picture: "assets/imag-product/coca-cola-zero.png",
+        picture: "assets/img-product/drink/coca-cola-zero.png",
         includedIngredients: [],
         extras: [],
         tags: ["drink"],
@@ -2188,7 +2191,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         title: "Limonade",
         description: "",
         price: 450,
-        picture: "assets/imag-product/limonade.png",
+        picture: "assets/img-product/drink/limonade.png",
         includedIngredients: [],
         extras: [],
         tags: ["drink"],
@@ -2198,13 +2201,14 @@ export const PRODUCTS: IProductsByCategory[] = [
   {
     id: 3,
     category: "dessert",
+    title:"Les desserts della Mamma ",
     products: [
       {
         id: 12,
         title: "Soufflé al Cioccolato",
         description: "Mi cuit au chocolat.",
         price: 690,
-        picture: "assets/img-product/chocolat.png",
+        picture: "assets/img-product/dessert/chocolat.png",
         includedIngredients: [],
         extras: [],
         tags: ["dessert"],
@@ -2214,7 +2218,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         title: "Panna cotta",
         description: "Panna cotta , accompagnée d’un coulis aux fruits rouges.",
         price: 690,
-        picture: "assets/img-product/pannacotta.png",
+        picture: "assets/img-product/dessert/pannacotta.png",
         includedIngredients: [],
         extras: [],
         tags: ["dessert"],
@@ -2225,7 +2229,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         description:
           "Entremets italien à base de mascarpone, de biscuit, parfumé au café et saupoudré de cacao.",
         price: 690,
-        picture: "assets/img-product/tiramisu.png",
+        picture: "assets/img-product/dessert/tiramisu.png",
         includedIngredients: [],
         extras: [],
         tags: ["dessert"],
