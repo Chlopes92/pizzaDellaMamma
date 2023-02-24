@@ -1,3 +1,10 @@
+a{
+    text-decoration: 1px solid var(--color);
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    text-decoration-line: revert;
+}
+
 article{
     display: flex;
     flex-direction: column;

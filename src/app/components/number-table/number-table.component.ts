@@ -31,10 +31,12 @@ export class NumberTableComponent {
     this.location.back();
   }
 
+  //fonction pour le texte de l'input invalide
   hideParagraph() {
     this.isVisible = true;
   }
 
+  //fonction pour l'input avec le regex qui accepter les numéros de 1 à 14
   table(){
     this.numberOfTable = this.formBuilder.group({
       number_table: [null, [Validators.required, Validators.pattern(/^(?:[1-9]|1[0-4])$/)]],
@@ -65,7 +67,6 @@ export class NumberTableComponent {
       
       //Remplace tous les éléments du tableau par la nouvelle donnée
       this.Table.newTable.splice(0, this.Table.newTable.length, this.data);
-
       console.log(this.Table.newTable);
       this.router.navigate(['/PRODUCTS']);
     }

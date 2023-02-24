@@ -3,24 +3,28 @@
         <h2>Benvenuto !</h2>
         <p>Veuillez renseigner votre numéro de table</p>
 
-    <form [formGroup]="numberOfTable">
-        <input type="text" placeholder="Exemple : 42" id="number_table" formControlName="number_table" [class.hasError]="validationError.includes('number_table')"(change)="evenement($event)">
-        <button type="submit" (click)="acces()"(click)="hideParagraph()">C'est parti !</button>
-        <p [class.redText]="validationError.includes('number_table')" *ngIf="isVisible">Numéro de table incorrecte.</p>
-    </form>
-  
+        <form [formGroup]="numberOfTable">
+            <input type="text" placeholder="Exemple : 42" id="number_table" formControlName="number_table"
+                [class.hasError]="validationError.includes('number_table')" (change)="evenement($event)">
+            <button type="submit" (click)="acces()" (click)="hideParagraph()">C'est parti !</button>
+            <p [class.redText]="validationError.includes('number_table')" *ngIf="isVisible">Numéro de table incorrecte.
+            </p>
+        </form>
+
     </article>
 
     <article *ngIf="visible.showDivHome">
         <h2>Table {{modifyTable}} </h2>
         <p>Modifier mon numéros de table</p>
-    
-    <form [formGroup]="numberOfTable">
-        <input type="text" placeholder="Exemple : 42" id="number_table" formControlName="number_table" [class.hasError]="validationError.includes('number_table')" (change)="evenement($event)">
-        <button type="submit" (click)="acces()" (click)="hideParagraph()">Modifier</button>
-        <p [class.redText]="validationError.includes('number_table')" *ngIf="isVisible">Numéro de table incorrecte.</p>
-    </form>
-    <a routerLink="." (click)="goBack()">Revenir à la commande</a>
+
+        <form [formGroup]="numberOfTable">
+            <input type="text" placeholder="Exemple : 42" id="number_table" formControlName="number_table"
+                [class.hasError]="validationError.includes('number_table')" (change)="evenement($event)">
+            <button type="submit" (click)="acces()" (click)="hideParagraph()">Modifier</button>
+            <p [class.redText]="validationError.includes('number_table')" *ngIf="isVisible">Numéro de table incorrecte.
+            </p>
+        </form>
+        <a routerLink="." (click)="goBack()">Revenir à la commande</a>
     </article>
 
 </main>

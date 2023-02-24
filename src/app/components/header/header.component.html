@@ -2,7 +2,7 @@
 <nav>
     <h1>Pizzeria Della Mamma</h1>
         <!-- <div *ngIf="isVisible"> -->
-        <div>
+        <div *ngIf="table.length > 0">
             <!-- On fait appel au service pour pouvoir afficher le numéro de la table -->
             <button routerLink="" (click)="toggle()"(click)="toggleDivHome()">Table {{table[0]}}</button>
             <button routerLink="/basket"><img src="assets/icon/cart_shopping_ic_icon.png" alt="panier"></button>

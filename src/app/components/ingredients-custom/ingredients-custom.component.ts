@@ -1,10 +1,10 @@
-import { Component, ElementRef, ViewChildren } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   IProduct,
   IProductsByCategory,
   PRODUCTS,
 } from 'src/app/mocks/productsfiltre.mock';
-import { ProductsService } from 'src/app/services/products/products.service';
+
 
 @Component({
   selector: 'app-ingredients-custom',
@@ -18,21 +18,25 @@ export class IngredientsCustomComponent {
   limitDown: number = 0;
   extraPrice: number = 0;
   totalExtras: number = 0;
-
-  // Je stocke mes boutons
-  @ViewChildren('buttonInc') buttonInc: ElementRef | undefined;
-  @ViewChildren('buttonDec') buttonDec: ElementRef | undefined;
+  // Propriété switch liée au [class] dans le html et au css
+  colorSwitch: boolean = false;
 
   // Je récupère mon service où j'ai implémenté ma méthode pour récupérer la liste des ingrédients extras
-  constructor(public ingredients: ProductsService) {}
-
+  constructor() {}
+  
   ngOnInit() {
     this.totalAmount();
     console.log(this.totalExtras);
-    console.log(this.buttonInc);
-    console.log(this.buttonDec);
+    this.sortProductsByName();
+    console.log(this.sortProductsByName())
+  }
+  
+  // Changement du style des boutons du compteur (changent tous pour le moment)
+  changeStyle(i: any) {
+    this.colorSwitch = true;
   }
 
+  // Incrément du compteur
   increment(i: any) {
     // Je modifie DIRECTEMENT la quantité en index de mon mock
     // JE NE PASSE PAS par une variable ex. quantity = this.products[0].extras[i].quantity => qui sera commune à tous les compteurs et incrémentera donc tous les compteurs
@@ -45,18 +49,14 @@ export class IngredientsCustomComponent {
       // J'incrémente mon total de la valeur € de l'extra
       this.totalAmount();
       return;
-    } else if (this.products[0].products[0].extras[i].quantity ==
+    } else if (this.products[0].products[0].extras[i].quantity ===
       this.products[0].products[0].extras[i].maxQuantity){
-      // Implémenter le switch de couleur des buttons ici
-      this.buttonInc?.nativeElement.classList.toggle('counter-plus');
-      this.buttonInc?.nativeElement.classList.toggle('counter-minus');
-      this.buttonDec?.nativeElement.classList.toggle('counter-minus');
-      this.buttonDec?.nativeElement.classList.toggle('counter-plus');
-
-      this.products[0].products[0].extras[i].maxQuantity;
+      // Je change la couleur du bouton + et du Bouton -
+      this.changeStyle(i);
     }
   }
 
+  // Décrément du compteur
   decrement(i: any) {
     // Je modifie DIRECTEMENT la quantité en index de mon mock
     // JE NE PASSE PAS par une variable ex. quantity = this.products[0].extras[i].quantity => qui sera commune à tous les compteurs et incrémentera donc tous les compteurs
@@ -67,10 +67,9 @@ export class IngredientsCustomComponent {
       this.totalAmount();
       return;
     }
-    return (this.products[0].products[0].extras[i].maxQuantity =
-      this.limitDown);
   }
 
+  // Calcul du cumul des tarifs extras
   totalAmount() {
     // On travaille directement sur le mock et sur la liste des extras
     this.totalExtras = this.products[0].products[0].extras.reduce(
@@ -82,5 +81,11 @@ export class IngredientsCustomComponent {
       // On prend comme base de l'accumulateur, le prix de la pizza auquel les extras vont se greffer
       this.products[0].products[0].price
     );
+  }
+
+  // Trie alphabétique de la liste des extras avec la méthode sort + localeCompare =>
+  // Pour des chaines de caractères contenant des caractères non ASCII, c'est à dire des chaines de caractères contenant par exemple des accents (é, è, a, ä, etc.) : utilisez String.localeCompare. Cette fonction peut comparer ces caractères afin qu'ils apparaissent dans le bon ordre.
+  sortProductsByName() {
+    return this.products[0].products[0].extras.sort((a, b) => a.ingredient.title.localeCompare(b.ingredient.title));
   }
 }
