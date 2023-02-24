@@ -1,0 +1,39 @@
+main{
+    margin:163px 136px ;
+}
+
+h1{
+    
+    font-weight: 400;
+    font-size: 30px;
+    
+}
+app-footer{
+    padding-top: 15px;
+    font-size: 30px;
+    font-weight: 700px;
+    padding-bottom: 109px;
+}
+span{
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+app-product-card{
+    padding-top: 40px;
+}
+.total{
+    text-align: end;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 477px;
+}
+a{
+    text-transform: uppercase;
+    cursor:pointer;
+    text-align: center;
+    margin: 380px;
+    font-weight: 400;
+    color: #092947;
+    font-size: 14px;
+}

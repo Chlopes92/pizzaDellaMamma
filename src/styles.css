@@ -27,3 +27,13 @@ h1,h2,h3{
 p{
     font-family: 'Inter', sans-serif;
 }
+.flex {
+    /* clesse globale pour metrre en flex, à ajouter dans le html*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}

@@ -1,0 +1,52 @@
+.container{
+    margin: 71px 100px;
+    padding-bottom: 500px;
+}
+.container h2{
+    display: flex;
+    align-items: flex-start;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+}
+A:hover{
+    color:rgb(95, 151, 249);
+}
+a{
+    text-decoration: underline;
+}
+.titre {
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+.vider{
+    cursor: pointer;
+}
+.bttn{
+    align-items: flex-end;
+    padding-bottom: 500px;
+}
+
+button{
+    font-weight: 700;
+    padding: 24px 96px;
+    background: #092947;
+    color: white;
+    border-radius: 10px;
+    width: 754px;
+    height: 67px;
+    margin-top: 42px;
+    cursor: pointer;
+}
+.titre p{
+    color: #E12417;
+    margin-bottom: 79px;
+}
+.articleNone{
+    padding-top: 57px;
+    padding-bottom: 16px;
+}
+
+

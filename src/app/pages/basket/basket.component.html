@@ -1,1 +1,26 @@
-<p>basket works!</p>
+<div class=" container ">
+    <h2>Panier</h2>
+     <div *ngIf="cart.length >0 ;else cartVide"> 
+        <div class="titre flex">
+            <a class="retour" routerLink="/PRODUCTS">Retourner sur la page produits</a>
+            <p class="vider" (click)="resetCart()">vider le panier</p>
+        </div>
+        <article class="flex column">
+            <app-card-product-cart *ngFor="let cartProduct of cart; let index=index" [index]="index"
+                [cartProduct]="cartProduct"></app-card-product-cart>
+        </article>
+        <div class="total"><p> <strong >Total:</strong> {{this.getTotalPrice()/100| number:'1.2'}}€</p></div>
+
+        <div class=" bttn flex column">
+            <button routerLink="/recapCommande">Table : Envoyer la commande en cuisine</button>
+            <a  routerLink="/modifTable">Votre table n’est pas la {{table}} ?</a>
+        </div>
+    </div>
+</div> 
+
+    <ng-template #cartVide> 
+
+        <p class="articleNone">Vous n’avez aucuns articles pour le moment.</p> 
+        <a  routerLink="/PRODUCTS">Retourner sur la page produits</a> 
+    
+    </ng-template> 

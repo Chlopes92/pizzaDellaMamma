@@ -1,0 +1,11 @@
+<div class="article flex"  *ngFor="let cartProduct of cart; let index=index">
+    <article>
+        <img src="{{cartProduct.product.picture}}" alt="photo de produit">
+    <div class="detail flex column">
+        <div class="nom-prix flex">
+            <h3>{{cartProduct.product.title}}</h3>
+            <p>{{cartProduct.product.price/100| number:'1.2'}}€</p>
+        </div>
+    </div>
+    </article>
+    </div>
