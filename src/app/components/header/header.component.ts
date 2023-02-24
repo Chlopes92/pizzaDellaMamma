@@ -8,10 +8,11 @@ import { VisibleService } from 'src/app/services/visible/visible.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  table: any[] = [];
 
   constructor (public data: TableService, public visibleService: VisibleService){}
-
-  table: any[] = [];
+  
+  
 
   ngOnInit(){
     this.table = this.data.newTable;
@@ -25,6 +26,8 @@ export class HeaderComponent {
   toggleDivHome() {
     this.visibleService.toggleshowDivHome();
   }
+
+ 
 
 
 }
