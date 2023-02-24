@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PRODUCTS, IProduct, IProductsByCategory } from 'src/app/mocks/productsfiltre.mock';
 import { ProductsService } from 'src/app/services/products/products.service';
 
@@ -11,6 +11,8 @@ import { ProductsService } from 'src/app/services/products/products.service';
 export class ProductDetailsComponent {
   // Je mets en propriétés mon mocks products.mock.ts
   product!: IProduct;
+@Input()element!:IProduct;
+
   // products: IProduct[] = PRODUCTS;
   products: IProductsByCategory[] = PRODUCTS;
 
