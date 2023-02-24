@@ -9,48 +9,37 @@ import { ProductsService } from 'src/app/services/products/products.service';
   styleUrls: ['./customization.component.css']
 })
 export class CustomizationComponent {
-  // je cree une variable qui contient mon produit
-  // productWitheId!:IProduct;
-  //   constructor(
-  //     private customService:ProductsService,
-  //     private activateRoute:ActivatedRoute){}
   
-  //     ngOninit(){
-  //       this. getProductCustom();
-  //     }
-  //     getProductCustom(){
-  //je recupere le id dans l'url
-  // let id=Number(this.activateRoute.snapshot.paramMap.get("id"));
-  //j'appelle le service avec le produit qui a le id
-  
-  //   const productExist=this.customService.getProduct(id);
-  //  console.log('productexiste',productExist);
-  //   if(productExist){
-  // this.productWitheId=productExist;
-  // console.log(this.productWitheId);
-  // }
-  // }
   product!:IProduct;
+  idproductURL!:number;
+  categoryURL!:string |null;
   productList:IProductsByCategory[]=PRODUCTS;
   constructor(
     private activatedRoute:ActivatedRoute
     ){}
     ngOnInit(){
-      this.getProduct("pizza",2);
+     
+      this.idproductURL=Number(this.activatedRoute.snapshot.paramMap.get("id"));
+      this.categoryURL=this.activatedRoute.snapshot.paramMap.get("category");
+       console.log("type",typeof(this.activatedRoute.snapshot.paramMap.get("category")));
+       this.getProduct(this.categoryURL,this.idproductURL);
     }
-    getProduct(categoryI:any ,idproduct:any){
-      const idproductURL=Number(this.activatedRoute.snapshot.paramMap.get("id"));
-      const categoryURL=this.activatedRoute.snapshot.paramMap.get("category");
-      const categoryL = this.productList.find((p) => p.category === categoryI);
+    getProduct(category:any ,idproduct:any){
+     
       
-      console.log("url de category",categoryURL);
-      console.log("url de product",idproductURL);
+      const categoryL = this.productList.find((p) => p.category === category);
+      
+      console.log("url de category",category);
+      console.log("url de product",idproduct);
       console.log("categoryl",categoryL);
       
       
       if (!categoryL) return;
       let product2=categoryL.products.find((p) => p.id === idproduct)
       console.log( product2);
+      if(product2){
+        this.product=product2;
+      }
       
       return categoryL.products.find((p) => p.id === idproduct)
       

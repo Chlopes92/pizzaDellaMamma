@@ -67,24 +67,24 @@ export class ProductsService {
   // getExtrasIngredients(extras: IExtraIngredient[]): IProduct[] {
   //   return PRODUCTS.filter(extIngredient => extIngredient.extras === extras)
   // }
-  getProduct(categoryI:any ,idproduct:any){
-    const idproductURL=Number(this.activatedRoute.snapshot.paramMap.get("id"));
-    const categoryURL=this.activatedRoute.snapshot.paramMap.get("category");
-    const categoryL = this.productList.find((p) => p.category === categoryI);
+  // getProduct(categoryI:any ,idproduct:any){
+  //   const idproductURL=Number(this.activatedRoute.snapshot.paramMap.get("id"));
+  //   const categoryURL=this.activatedRoute.snapshot.paramMap.get("category");
+  //   const categoryL = this.productList.find((p) => p.category === categoryI);
     
-    console.log("url de category",categoryURL);
-    console.log("url de product",idproductURL);
-    console.log("categoryl",categoryL);
-    
-    
-    if (!categoryL) return;
-    let product2=categoryL.products.find((p) => p.id === idproduct)
-    console.log( product2);
-    
-    return categoryL.products.find((p) => p.id === idproduct)
+  //   console.log("url de category",categoryURL);
+  //   console.log("url de product",idproductURL);
+  //   console.log("categoryl",categoryL);
     
     
+  //   if (!categoryL) return;
+  //   let product2=categoryL.products.find((p) => p.id === idproduct)
+  //   console.log( product2);
     
-  }
+  //   return categoryL.products.find((p) => p.id === idproduct)
+    
+    
+    
+  // }
 
 }

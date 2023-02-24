@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PRODUCTS, IProduct, IProductsByCategory } from 'src/app/mocks/productsfiltre.mock';
 import { ProductsService } from 'src/app/services/products/products.service';
 
@@ -13,7 +13,7 @@ export class ProductDetailsComponent {
   product!: IProduct;
   // products: IProduct[] = PRODUCTS;
   products: IProductsByCategory[] = PRODUCTS;
-
+@Input()element!:IProduct;
   // Je récupère mon service où j'ai implémenté ma méthode pour récupérer la liste des ingrédients inclus 
 // constructor(public ingredients: ProductsService,){}
 
