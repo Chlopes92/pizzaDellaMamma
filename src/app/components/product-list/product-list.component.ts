@@ -8,6 +8,6 @@ import { IProduct, IProductsByCategory, ProductCategoryType, PRODUCTS } from 'sr
 })
 export class ProductListComponent {
 @Input() productsList!:IProduct[];
-@Input() categories!:ProductCategoryType;
+// @Input() categories!:ProductCategoryType;
 
 }

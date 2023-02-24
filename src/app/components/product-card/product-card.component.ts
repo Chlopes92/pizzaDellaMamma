@@ -9,7 +9,7 @@ import { ProductsService } from 'src/app/services/products/products.service';
 })
 export class ProductCardComponent {
   @Input() product!:IProduct;
-@Input() category!:ProductCategoryType;
+// @Input() category!:ProductCategoryType;
 
 
 

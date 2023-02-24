@@ -10,7 +10,7 @@
     <div class="product-details">
       <div class="details-container">
         <h2 class="product-title">{{ element.title }}</h2>
-        <p class="product-price">{{ element.price * (100 / 10000) }}.00€</p>
+        <p class="product-price">{{ element.price /100 |number: "1.2" }}€</p>
         <p>{{ element.description }}</p>
       </div>
       <div class="inputs-container">

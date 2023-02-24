@@ -10,9 +10,9 @@ import { ProductsService } from 'src/app/services/products/products.service';
 })
 export class ProductDetailsComponent {
   // Je mets en propriétés mon mocks products.mock.ts
-  product!: IProduct;
+  // product!: IProduct;
   // products: IProduct[] = PRODUCTS;
-  products: IProductsByCategory[] = PRODUCTS;
+  // products: IProductsByCategory[] = PRODUCTS;
 @Input()element!:IProduct;
   // Je récupère mon service où j'ai implémenté ma méthode pour récupérer la liste des ingrédients inclus 
 // constructor(public ingredients: ProductsService,){}
