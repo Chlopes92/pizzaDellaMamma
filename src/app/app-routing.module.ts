@@ -27,7 +27,7 @@ const routes: Routes = [
 
   },
   {
-    path: "customization",
+    path: "customization/:category/:id",
     component: CustomizationComponent
   },
   {

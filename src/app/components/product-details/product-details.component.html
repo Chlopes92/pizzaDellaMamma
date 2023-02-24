@@ -4,13 +4,14 @@
   </div>
   <div class="container">
     <div class="product-image">
-      <img src="{{ products[0].products[0].picture }}" alt="produit sélectionné" />
+      <!-- <img src="{{ products[0].products[0].picture }}" alt="produit sélectionné" /> -->
+      <img src="{{ element.picture}}" alt="produit sélectionné" />
     </div>
     <div class="product-details">
       <div class="details-container">
-        <h2 class="product-title">{{ products[0].products[0].title }}</h2>
-        <p class="product-price">{{ products[0].products[0].price * (100 / 10000) }}.00€</p>
-        <p>{{ products[1].products[0].description }}</p>
+        <h2 class="product-title">{{ element.title }}</h2>
+        <p class="product-price">{{ element.price /100 |number: "1.2" }}€</p>
+        <p>{{ element.description }}</p>
       </div>
       <div class="inputs-container">
         <h2 class="included-title">Ingrédients inclus</h2>
@@ -18,7 +19,7 @@
         <div class="inputs">
           <div
             class="inputs-display"
-            *ngFor="let includedIngredient of products[0].products[0].includedIngredients"
+            *ngFor="let includedIngredient of element.includedIngredients"
           >
             <label for="included">{{
               includedIngredient.ingredient.title
@@ -33,3 +34,4 @@
     </div>
   </div>
 </section>
+
