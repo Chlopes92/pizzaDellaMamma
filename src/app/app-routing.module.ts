@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { OrderConfirmationComponent } from './pages/order-confirmation/order-confirmation.component';
 import { ProductCategoryComponent } from './pages/product-category/product-category.component';
 import { PRODUCTSComponent } from './pages/products/products.component';
+import { RecapCommandeComponent } from './pages/recap-commande/recap-commande.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: "basket",
     component: BasketComponent
+  },
+  {
+    path: "recapCommande",
+    component: RecapCommandeComponent
   },
   {
     path: "orderConfirmation",

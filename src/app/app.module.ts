@@ -21,6 +21,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavActionComponent } from './components/nav-action/nav-action.component';
+import { RecapCommandeComponent } from './pages/recap-commande/recap-commande.component';
+import { CardProductCartComponent } from './components/card-product-cart/card-product-cart.component';
 
 
 
@@ -46,6 +48,8 @@ import { NavActionComponent } from './components/nav-action/nav-action.component
     ProductCardComponent,
     FooterComponent,
     NavActionComponent,
+    RecapCommandeComponent,
+    CardProductCartComponent,
 
   ],
   imports: [

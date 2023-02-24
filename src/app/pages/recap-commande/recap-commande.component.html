@@ -1,0 +1,17 @@
+<main>
+<div class="flex column"> 
+    <h1>Votre commande a bien été envoyée en cuisine !</h1>
+    <app-footer></app-footer>
+    </div>
+    
+    <span> Commande table {{table}}  </span>
+    <app-product-card></app-product-card>
+    <div class="total">
+        <p> <strong>Total:</strong> {{this.getTotalPrice()/100| number:'1.2'}}€</p>
+    </div>
+    
+   
+     
+     <a  routerLink="" (click)="resetcart()">COMMENCER UNE NOUVELLE COMMANDE</a>
+    
+    </main>
