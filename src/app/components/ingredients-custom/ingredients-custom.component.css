@@ -48,14 +48,6 @@ section {
     font-size: 170%;
 }
 
-/* .btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-} */
-
 .add-button button {
     font-weight: 700;
     padding: 24px 96px;
@@ -65,4 +57,12 @@ section {
     width: 370px;
     margin-top: 42px;
     cursor: pointer;
+}
+
+.grey {
+    background: rgba(9, 41, 71, 0.6);
+}
+
+.darkGrey {
+    background: #092947;
 }

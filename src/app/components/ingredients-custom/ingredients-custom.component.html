@@ -10,9 +10,9 @@
       </p>
     </div>
     <div class="counter-block">
-      <button class="counter-minus" (click)="decrement(i)" #buttonDec>-</button>
+      <button class="counter-minus" (click)="decrement(i)" [class.darkGrey]="colorSwitch">-</button>
       <p class="counter">{{ extraIngredient.quantity }}</p>
-      <button class="counter-plus" (click)="increment(i)" #buttonInc>+</button>
+      <button class="counter-plus" (click)="increment(i)" [class.grey]="colorSwitch">+</button>
     </div>
   </div>
   <div class="add-button">

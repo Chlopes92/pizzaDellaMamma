@@ -24,7 +24,6 @@ import { NavActionComponent } from './components/nav-action/nav-action.component
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +45,6 @@ import { NavActionComponent } from './components/nav-action/nav-action.component
     ProductCardComponent,
     FooterComponent,
     NavActionComponent,
-
   ],
   imports: [
     BrowserModule,
