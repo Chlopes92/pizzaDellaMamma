@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IProduct, IProductsByCategory, PRODUCTS } from 'src/app/mocks/productsfiltre.mock';
+import { IProduct, IProductsByCategory, ProductCategoryType, PRODUCTS } from 'src/app/mocks/productsfiltre.mock';
 
 @Component({
   selector: 'app-product-list',
@@ -8,6 +8,6 @@ import { IProduct, IProductsByCategory, PRODUCTS } from 'src/app/mocks/productsf
 })
 export class ProductListComponent {
 @Input() productsList!:IProduct[];
-
+@Input() categories!:ProductCategoryType;
 
 }

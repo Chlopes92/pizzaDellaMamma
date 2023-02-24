@@ -15,16 +15,16 @@ export class ProductDetailsComponent {
   products: IProductsByCategory[] = PRODUCTS;
 
   // Je récupère mon service où j'ai implémenté ma méthode pour récupérer la liste des ingrédients inclus 
-constructor(public ingredients: ProductsService,){}
+// constructor(public ingredients: ProductsService,){}
 
-ngOnInit() {
+// ngOnInit() {
 
-}
+// }
 
-addIncludedIngredients() {
+// addIncludedIngredients() {
 
-}
+// }
 
 
 
-}
+ }

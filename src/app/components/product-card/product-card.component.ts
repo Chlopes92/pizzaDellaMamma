@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { IProduct } from 'src/app/mocks/productsfiltre.mock';
+import { IProduct, ProductCategoryType } from 'src/app/mocks/productsfiltre.mock';
+import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
   selector: 'app-product-card',
@@ -8,5 +9,8 @@ import { IProduct } from 'src/app/mocks/productsfiltre.mock';
 })
 export class ProductCardComponent {
   @Input() product!:IProduct;
+@Input() category!:ProductCategoryType;
+
+
 
 }
